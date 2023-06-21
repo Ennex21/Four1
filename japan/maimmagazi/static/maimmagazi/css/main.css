@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu {
+    height: 220px;
+    background-color: #784141;
+    border-radius: 0px 0px 35px 35px;
+}
+
+.container {
+    width: 1180px;
+    margin: auto;
+}
+
+.kartini{
+    display: flex;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0px;
+}
+
+.slider p{
+    margin: 20px 0px;
+    font-size: 20px;
+}
+
+.slider button{
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menulink {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menulink-left {
+    display: flex;
+}
+
+.teha {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+
+.text-menulink {
+    font-size: 14px;
+    color: white;
+}
+
+.shop {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.help {
+    display: flex;
+    align-items: center;
+}
+
+.midmenu {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.boxlogo {
+    width: 280px;
+    height: 60px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #ad7d7d;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.search {
+    width: 580px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ad7d7d;
+    display: flex;
+}
+
+.search-form {
+    margin: 5px 10px 0px 10px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.text-search-form {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+    color: white;
+    width: 500px;
+}
+
+.text-search-form::-webkit-input-placeholder {
+    color: white;
+}
+
+.menuicon {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.boxicon {
+    width: 75px;
+    height: 60px;
+}
+
+
+.text-icon {
+    font-size: 14px;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.line {
+    border: 1px solid #fcc351;
+    margin-top: 30px;
+}
+
+.nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-nav {
+    font-size: 14px;
+    color: #fcc351;
+    cursor: pointer;
+}
+
+.headerbot {
+    display: flex;
+}
+
+.katalog {
+    width: 280px;
+    height: 590px;
+    background-color: #ad7d7d;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.katalog-block {
+    display: flex;
+}
+
+.lil-text {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.box-katalog {
+    width: 280px;
+    height: 590px;
+}
+
+.box-katalog2 {
+    display: none;
+    width: 280px;
+    height: 590px;
+}
+
+.category {
+    font-size: 20px;
+    color: #ffcf3d;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.line-kategory {
+    margin: 20px;
+    border: 1px solid #ffcf3d;
+}
+
+
+.slider{
+    margin-left: 50px;
+}
+
+
+.sale{
+    margin-top: 100px;
+}
+
+.sale-text {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.boxi {
+    padding: 10px 7px;
+}
+
+
+
+.item {
+    width: 280px;
+    height: 230px;
+}
+
+.main-text-sale {
+    font-size: 16px;
+    color: black;
+}
+
+.grade {
+    display: flex;
+    align-items: end;
+    padding: 5px 0px;
+}
+
+.star {
+    width: 20px;
+}
+
+.grade-text {
+    font-size: 15px;
+    color: black;
+    letter-spacing: -1px;
+    padding-left: 5px;
+}
+
+.review {
+    font-size: 18px;
+    color: black;
+    padding-left: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: end;
+}
+
+.text-main-price {
+    font-size: 30px;
+    color: black;
+}
+
+.text-price {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: gray;
+    padding-left: 10px;
+}
+
+.footer {
+    height: 200px;
+    border-radius: 35px 35px 0px 0px;
+    background-color: #784141;
+    margin-top: 100px;
+}
+
+.footer-text {
+    font-size: 16px;
+    color: white;
+    padding: 6px 0px;
+    cursor: pointer;
+}
+
+.footer-text2 {
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-box2 {
+    padding-left: 100px;
+}
+
+.footer-main {
+    padding-top: 10px;
+    display: flex;
+}
+
+.footer-img {
+
+}
+
+.icon-footer {
+    width: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}

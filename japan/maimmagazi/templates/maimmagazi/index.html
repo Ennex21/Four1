@@ -1,0 +1,32 @@
+{% extends 'maimmagazi/base.html' %}
+
+
+{% block categor1 %}
+    <div class="box-katalog" id="diva">
+        <li class="lil-text">The Legend of Zelda</li>
+        <li class="lil-text">Bloodborne</li>
+        <li class="lil-text">NieR: Automata</li>
+        <li class="lil-text">Dark Souls III</li>
+        <li class="lil-text">Sekiro: Shadows Die Twice</li>
+        <li class="lil-text">Devil May Cry 5</li>
+        <li class="lil-text">Final Fantasy</li>
+    </div>
+{% endblock %}
+
+
+
+{% block product %}
+    <div class="slider">
+        {% for el in item %}
+        <div>
+            <h3>{{ el.title }}</h3>
+            {% if el.photo %}
+            <p><img src="{{ el.photo.url }}" height="500px" alt="photo"></p>
+            {% endif %}
+            <p>Описание: {{ el.desk|linebreaks }}</p>
+            <button>{{ el.price }}₽</button>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+

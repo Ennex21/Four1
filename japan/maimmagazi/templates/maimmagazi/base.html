@@ -1,0 +1,240 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+    <link rel="stylesheet" href="{% static 'maimmagazi/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <div class="container">
+                <div class="menulink">
+                    <div class="menulink-left">
+                        <div class="help">
+                            <p class="text-menulink">Контакты: </p>
+                        </div>
+                        <div class="teha">
+                            <p class="text-menulink">+7 900 777-00-00</p>
+                        </div>
+                        <div class="shop">
+                            <p class="text-menulink">helpshoppet@mail.ru</p>
+                        </div>
+                        <div class="shop">
+                            <button class="text-menulink" onclick="location.href='{% url 'logout' %}?next=/'">Выход</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="midmenu">
+                    <div class="boxlogo">
+                        <img src="{% static 'maimmagazi/img/logo.svg' %}" alt="" class="logo">
+                    </div>
+                    <div class="search">
+                        <button class="search-form"></button>
+                        <input class="text-search-form" type="text" placeholder="Поиск игр">
+                    </div>
+                    <div class="menuicon">
+                        <a href="" class=""><div class="boxicon">
+                            <p class="text-icon">Избранное</p>
+                        </div></a>
+                        <a href="" class=""><div class="boxicon">
+                            <p class="text-icon">Корзина</p>
+                        </div></a>
+                        <a href="" class=""><div class="boxicon">
+                            <p class="text-icon">Приветствую, {{ user.username }}</p>
+                        </div></a>
+
+                    </div>
+                </div>
+                <hr class="line">
+                <div class="nav">
+                    <a href="{% url 'home' %}"><p class="text-nav">ACTION</p></a>
+                    <a href="{% url 'categ2' %}"><p class="text-nav">FIGHTING</p></a>
+                    <a href="{% url 'categ3' %}"><p class="text-nav">ADVENTURE</p></a>
+                    <a href="{% url 'categ4' %}"><p class="text-nav">PLATFORMER</p></a>
+                    <a href="{% url 'categ5' %}"><p class="text-nav">SIMULATOR</p></a>
+                    <a href="{% url 'categ6' %}"><p class="text-nav">STEALTH</p></a>
+                    <a href="{% url 'categ7' %}"><p class="text-nav">SURVIVAL HORROR</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="kartini">
+            <div class="headerbot">
+                <div class="katalog">
+                    <p class="category">Представители</p>
+                    <hr class="line-kategory">
+                    <div class="katalog-block">
+                        {% block categor1 %}
+                        {% endblock %}
+                        {% block categor2 %}
+                        {% endblock %}
+                        {% block categor3 %}
+                        {% endblock %}
+                        {% block categor4 %}
+                        {% endblock %}
+                        {% block categor5 %}
+                        {% endblock %}
+                        {% block categor6 %}
+                        {% endblock %}
+                        {% block categor7 %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+            {% block product %}
+            {% endblock %}
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+        <div class="sale" id="sale-block">
+            <div class="sale-text"><p>Специальное предложение</p></div>
+            <div class="block">
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/Bloodborne.jpeg' %}" alt="" class="item">
+                    <p class="main-text-sale">BLOODBORNE</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">4,9</p>
+                        <p class="review">167 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">800 р.</p>
+                        <p class="text-price">1600 р.</p>
+                    </div>
+                </div>
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/DEVIL_MAY_CRY_5.png' %}" alt="" class="item">
+                    <p class="main-text-sale">DEVIL MAY CRY 5</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">4,9</p>
+                        <p class="review">134 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">1000 р.</p>
+                        <p class="text-price">1800 р.</p>
+                    </div>
+                </div>
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/SEKIRO_SHADOWS_DIE_TWICE.jpg' %}" alt="" class="item">
+                    <p class="main-text-sale">SEKIRO: SHADOWS DIE TWICE</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">5</p>
+                        <p class="review">891 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">4000 р.</p>
+                        <p class="text-price">4800 р.</p>
+                    </div>
+                </div>
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/RESIDENT_EVIL_2_REMAKE.jpg' %}" alt="" class="item">
+                    <p class="main-text-sale">RESIDENT EVIL 2 REMAKE</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">4,9</p>
+                        <p class="review">501 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">2500 р.</p>
+                        <p class="text-price">3200 р.</p>
+                    </div>
+                </div>
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/YAKUZA_0.jpg' %}" alt="" class="item">
+                    <p class="main-text-sale">YAKUZA 0</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">4,9</p>
+                        <p class="review">153 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">899 р.</p>
+                        <p class="text-price">1300 р.</p>
+                    </div>
+                </div>
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/LITTLE_NIGHTMARES.png' %}" alt="" class="item">
+                    <p class="main-text-sale">LITTLE NIGHTMARES</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">4,9</p>
+                        <p class="review">67 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">270 р.</p>
+                        <p class="text-price">400 р.</p>
+                    </div>
+                </div>
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/ANIMAL_CROSSING.jpg' %}" alt="" class="item">
+                    <p class="main-text-sale">ANIMAL CROSSING</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">4,9</p>
+                        <p class="review">3345 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">3800 р.</p>
+                        <p class="text-price">4000 р.</p>
+                    </div>
+                </div>
+                <div class="boxi">
+                    <img src="{% static 'maimmagazi/img/TEKKEN_7.jpeg' %}" alt="" class="item">
+                    <p class="main-text-sale">TEKKEN 7</p>
+                    <div class="grade">
+                        <img src="{% static 'maimmagazi/img/star.svg' %}" alt="" class="star">
+                        <p class="grade-text">4,9</p>
+                        <p class="review">979 отзывов</p>
+                    </div>
+                    <div class="price">
+                        <p class="text-main-price">2700 р.</p>
+                        <p class="text-price">3200 р.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-box">
+                    <li class="footer-text">О нас</li>
+                    <li class="footer-text">Отзывы</li>
+                    <li class="footer-text">Способы оплаты</li>
+                    <li class="footer-text">Обмен и возврат</li>
+                    <li class="footer-text">Поддержка</li>
+                </div>
+                <div class="footer-box2">
+                    <li class="footer-text">Мы в соцсетях</li>
+                    <div class="footer-img">
+                        <img src="{% static 'maimmagazi/img/vk.png' %}" alt="" class="icon-footer">
+                        <img src="{% static 'maimmagazi/img/tg.png' %}" alt="" class="icon-footer">
+                    </div>
+                </div>
+                <div class="footer-box2">
+                    <li class="footer-text">ООО "Катаночка"</li>
+                    <li class="footer-text2">Все права защищены законом</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
